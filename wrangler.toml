@@ -1,3 +1,10 @@
 name = "sveltia-cms-auth"
 main = "src/index.js"
 compatibility_date = "2026-11-11"
+
+# Kept here so a deployment from this repository does not drop them. Neither is a secret: the
+# client secret stays in the Cloudflare dashboard as an encrypted variable.
+[vars]
+GITHUB_CLIENT_ID = "Iv23li8SPJ1Gc56g1PU4"
+# Sites that may sign in through this Worker: Senctra staging, its pr-<n> previews, and localhost.
+ALLOWED_DOMAINS = "staging.62-146-233-146.sslip.io, *.staging.62-146-233-146.sslip.io, localhost"
